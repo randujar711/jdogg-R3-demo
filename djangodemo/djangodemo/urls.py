@@ -22,11 +22,13 @@ from core.views import index, contact
 from item import urls as item_urls 
 from dashboard import urls as dash_urls
 from conversation import urls as convo_urls
+from user_payment import urls as payment_urls
 urlpatterns = [
     #in the line below 'when the path is empty it will loop through all of the paths in core.urls before going to the other pathss
     path('', include('core.urls')),
     path('items/', include(item_urls)),
     path('dashboard/', include(dash_urls)),
     path('inbox/', include(convo_urls)),
+    path('payment/', include(payment_urls)),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

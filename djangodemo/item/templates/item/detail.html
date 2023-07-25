@@ -37,7 +37,17 @@
             </div>
         {% else %}
 
-            <a href="{% url 'conversation:new' item.id %}" class="inline-block mt- px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Contact Seller: </a>
+            <a href="{% url 'conversation:new' item.id %}" class="inline-block mt- px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Contact Seller </a>
+
+            
+            <form action="." method="post">
+                {% csrf_token %}
+                <div>{{csrf_token}}</div>
+                <button type='submit' href="{% url 'user_payment:product_page' item.id %}"
+                    class="inline-block mt- px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Buy Now
+                </button>
+            </form>
+            
 
         {% endif %}
     </div>
