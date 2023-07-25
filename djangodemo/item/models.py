@@ -20,7 +20,7 @@ class Item(models.Model):
     price = models.FloatField()
     #you will need to tweak the settings.py file to configure the images 
     image = models.ImageField(upload_to='items_images', blank=True, null=True)
-    is_sold = models.BooleanField(default=True)
+    is_sold = models.BooleanField(default=False)
     created_by = models.ForeignKey(User, related_name='items', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
 
