@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -132,3 +133,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STRIPE_PUBLIC_KEY_TEST = os.getenv('Ssk_test_51MeOy7Fc2Cgp8gJYbGuCzgm78vuGnP6MDV10RBVhsgh2Sp9gdh3jRmsOOGxgQryISskpvNcbERSLDVsXulGPhb5Y0021pxqs7a')
+STRIPE_SECRET_KEY_TEST = os.getenv('sk_test_51MeOy7Fc2Cgp8gJYbGuCzgm78vuGnP6MDV10RBVhsgh2Sp9gdh3jRmsOOGxgQryISskpvNcbERSLDVsXulGPhb5Y0021pxqs7a')
+STRIPE_WEBHOOK_SECRET_TEST = os.getenv('STRIPE_WEBHOOK_SECRET_TEST')
+PRODUCT_PRICE = os.getenv('PRODUCT_PRICE')
