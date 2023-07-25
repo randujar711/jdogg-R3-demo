@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 # the below is needed to override djangos refault redireaction
 LOGIN_URL = '/login/'
-LOGIN_REDIRCT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT = '/'
 
 # Application definition

@@ -29,6 +29,7 @@ def signup(request):
         'form': form
     })
 
-def logout(request):
+def logout_user(request):
+    print('logout ran')
     logout(request)
-    return redirect('/index/')
+    return redirect('/')
